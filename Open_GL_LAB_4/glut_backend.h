@@ -1,8 +1,7 @@
-#pragma once
 #ifndef GLUT_BACKEND_H
 #define GLUT_BACKEND_H
 
-#include "ñallbacks.h"
+#include "callbacks.h"
 
 void GLUTBackendInit(int argc, char** argv);
 

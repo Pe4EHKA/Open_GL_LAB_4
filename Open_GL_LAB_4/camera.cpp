@@ -1,11 +1,8 @@
 #include <GL/freeglut.h>
+
 #include "camera.h"
 
-#define M_PI       3.14159265358979323846   // pi
-#define ToRadian(x) ((x) * M_PI / 180.0f)
-#define ToDegree(x) ((x) * 180.0f / M_PI)
-
-const static float STEP_SCALE = 0.1f;
+const static float STEP_SCALE = 0.4f;
 const static int MARGIN = 10;
 
 Camera::Camera(int WindowWidth, int WindowHeight)
@@ -126,8 +123,8 @@ void Camera::OnMouse(int x, int y)
     const int DeltaX = x - m_mousePos.x;
     const int DeltaY = y - m_mousePos.y;
 
-    m_AngleH += (float)DeltaX / 900.0f;
-    m_AngleV += (float)DeltaY / 900.0f;
+    m_AngleH += (float)DeltaX / 120.0f;
+    m_AngleV += (float)DeltaY / 120.0f;
 
     Update();
     glutWarpPointer(m_mousePos.x, m_mousePos.y);
